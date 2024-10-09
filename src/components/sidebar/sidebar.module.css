@@ -1,0 +1,58 @@
+.listItems {
+    text-align: left;
+    border: var(--bs-list-group-border-width) solid var(--bs-list-group-border-color);
+    padding: 1em 0;
+    border-radius: 6px;
+}
+
+.sidebar {
+    background-color: #FFD9B6;
+}
+
+.listItemHeader {
+    border: none;
+    padding: 1.5em 0.5em;
+}
+
+.listGroupItem{
+    font-size: 18px;
+    font-weight: 800;
+    margin: 0.5em;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    border-radius: 6px;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.listGroupItem:hover {
+    background-color: #fdb26e;
+    color: #ffffff;
+}
+
+.listItems li img {
+    width: 1.5em;
+    height: auto;
+}
+
+.listItemHeader img {
+    width: 2em !important;
+    height: 2em !important;
+}
+
+.listItemHeader p span {
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.listGroupItem.activeMenuItem::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 2.5em;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
