@@ -1,5 +1,24 @@
 .rightImage {
-    border: 1px solid #ffffff;
-    border-radius: 6px;
     width: 50%;
+    background-color: #f0f0f0cc;
+    padding: 1em;
+    border-radius: 8px;
+}
+
+.bottomBorder {
+    border-bottom: 1px dashed #5c5959;
+    height: 1px;
+}
+
+.rightImage h2 {
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: orange;
+    text-underline-offset: 0.25em;
+}
+
+.rightImage span {
+    text-decoration: underline;
+    text-decoration-color: deepskyblue;
+    text-underline-offset: 0.25em;
 }

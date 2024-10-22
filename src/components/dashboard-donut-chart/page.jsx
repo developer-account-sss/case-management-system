@@ -1,4 +1,6 @@
 import Chart from "react-apexcharts";
+import styles from './page.module.css';
+
 const DonutChart = (props) => {
   const week = [102, 75, 38];
   const month = [50, 50, 50];
@@ -97,7 +99,7 @@ const DonutChart = (props) => {
   };
   const series = change;
   return (
-    <div style={{margin: '5em auto 3em'}}>
+    <div style={{margin: '0 auto', backgroundColor: '#f0f0f06e', padding: '1em', borderRadius: '8px'}}>
       <Chart
         options={options}
         series={series}
@@ -105,6 +107,20 @@ const DonutChart = (props) => {
         width="100%"
         height={320}
       />
+      <div className={`d-flex flex-row gap-5 ${styles.statBoxes}`}>
+        <div className={`${styles.stats} ${styles.high}`}>
+            <h2>102</h2>
+            <span>High Priority</span>
+        </div>
+        <div className={`${styles.stats} ${styles.medium}`}>
+            <h2>75</h2>
+            <span>Medium Priority</span>
+        </div>
+        <div className={`${styles.stats} ${styles.low}`}>
+            <h2>38</h2>
+            <span>Low Priority</span>
+        </div>
+      </div>
     </div>
   );
 };

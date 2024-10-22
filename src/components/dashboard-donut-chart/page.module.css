@@ -1,0 +1,11 @@
+.high {
+    border-bottom: 3px solid #D3212C;
+}
+
+.medium {
+    border-bottom: 3px solid #FF980E;
+}
+
+.low {
+    border-bottom: 3px solid #069C56;
+}

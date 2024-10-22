@@ -46,6 +46,102 @@ const Cases = () => {
                         <td>Open</td>
                         <td>Criminal</td>
                     </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td><Link to= '/case-details/1'>Case 111</Link></td>
+                        <td>12- 02- 2023</td>
+                        <td>N.A</td>
+                        <td>Open</td>
+                        <td>Criminal</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td><Link to= '/case-details/1'>Case 2232</Link></td>
+                        <td>12- 02- 2023</td>
+                        <td>N.A</td>
+                        <td>Open</td>
+                        <td>Civil</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td><Link to= '/case-details/1'>Case 23453</Link></td>
+                        <td>12- 02- 2023</td>
+                        <td>N.A</td>
+                        <td>Open</td>
+                        <td>Criminal</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">7</th>
+                        <td><Link to= '/case-details/1'>Case 111</Link></td>
+                        <td>12- 02- 2023</td>
+                        <td>N.A</td>
+                        <td>Open</td>
+                        <td>Criminal</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">8</th>
+                        <td><Link to= '/case-details/1'>Case 2232</Link></td>
+                        <td>12- 02- 2023</td>
+                        <td>N.A</td>
+                        <td>Open</td>
+                        <td>Civil</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">9</th>
+                        <td><Link to= '/case-details/1'>Case 23453</Link></td>
+                        <td>12- 02- 2023</td>
+                        <td>N.A</td>
+                        <td>Open</td>
+                        <td>Criminal</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">10</th>
+                        <td><Link to= '/case-details/1'>Case 111</Link></td>
+                        <td>12- 02- 2023</td>
+                        <td>N.A</td>
+                        <td>Open</td>
+                        <td>Criminal</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">11</th>
+                        <td><Link to= '/case-details/1'>Case 2232</Link></td>
+                        <td>12- 02- 2023</td>
+                        <td>N.A</td>
+                        <td>Open</td>
+                        <td>Civil</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">12</th>
+                        <td><Link to= '/case-details/1'>Case 23453</Link></td>
+                        <td>12- 02- 2023</td>
+                        <td>N.A</td>
+                        <td>Open</td>
+                        <td>Criminal</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">13</th>
+                        <td><Link to= '/case-details/1'>Case 111</Link></td>
+                        <td>12- 02- 2023</td>
+                        <td>N.A</td>
+                        <td>Open</td>
+                        <td>Criminal</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">14</th>
+                        <td><Link to= '/case-details/1'>Case 2232</Link></td>
+                        <td>12- 02- 2023</td>
+                        <td>N.A</td>
+                        <td>Open</td>
+                        <td>Civil</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">15</th>
+                        <td><Link to= '/case-details/1'>Case 23453</Link></td>
+                        <td>12- 02- 2023</td>
+                        <td>N.A</td>
+                        <td>Open</td>
+                        <td>Criminal</td>
+                    </tr>
                 </tbody>
             </table>
         </>

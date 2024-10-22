@@ -1,98 +1,87 @@
-// TaskBoard.js
-import React, { useState } from "react";
-import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+import React from "react";
+import Draggable from "react-draggable";
+import styles from './page.module.css';
 import "./taskboard.css";
+import { Link } from "react-router-dom";
 
 function TaskBoard() {
-  const [tasks, setTasks] = useState({
-    high: [
-      { id: "task-1", content: "Complete project proposal" },
-      { id: "task-2", content: "Finish frontend design" },
-    ],
-    medium: [
-      { id: "task-3", content: "Prepare presentation" },
-      { id: "task-4", content: "Team meeting" },
-    ],
-    low: [
-      { id: "task-5", content: "Organize files" },
-      { id: "task-6", content: "Update software" },
-    ],
-  });
 
-  // Handle drag end event
-  const onDragEnd = (result) => {
-    const { source, destination } = result;
+    const newlyAdded = [
+        { id: "task-1", content: "Disenhouse Assoc. v Mazzaferro", priority: "High Priority", type: "Bankruptcy" },
+        { id: "task-2", content: "La Manna Concrete v Friedman", priority: "Low Priority", type: "Criminal" },
+        { id: "task-3", content: "People v Matera ", priority: "High Priority", type: "Civil" },
+        { id: "task-4", content: "Fix bugs in codebase", priority: "Medium Priority", type: "DUI/DWI" },
+    ];
 
-    // If dropped outside any column, do nothing
-    if (!destination) return;
+    const consultScheduled = [
+        { id: "task-5", content: "Prepare presentation", priority: "Medium Priority", type: "Employment" },
+        { id: "task-6", content: "Team meeting", priority: "Low Priority", type: "Family" },
+        { id: "task-7", content: "Little v Banks (85 NY 258)", priority: "Low Priority", type: "Civil" },
 
-    // If the item is dropped in the same place, do nothing
-    if (
-      source.droppableId === destination.droppableId &&
-      source.index === destination.index
-    ) {
-      return;
-    }
+    ];
 
-    // Clone the source column and the task being dragged
-    const sourceColumn = [...tasks[source.droppableId]];
-    const destinationColumn = [...tasks[destination.droppableId]];
-    const [movedTask] = sourceColumn.splice(source.index, 1);
+    const pendingEngagement = [{ id: "task-8", content: "Little v Banks (85 NY 258)" , priority: "High Priority", type: "Criminal"}];
 
-    // Insert the dragged task into the destination column
-    destinationColumn.splice(destination.index, 0, movedTask);
+    const workingOnRetainer = [
+        { id: "task-5", content: "Prepare presentation", priority: "Low Priority", type: "Immigration" },
+        { id: "task-6", content: "Team meeting", priority: "Medium Priority", type: "Bankruptcy" },
+        { id: "task-7", content: "Little v Banks (85 NY 258)", priority: "Low Priority", type: "Divorce" },
+    ];
 
-    // Update state with new task arrangement
-    setTasks({
-      ...tasks,
-      [source.droppableId]: sourceColumn,
-      [destination.droppableId]: destinationColumn,
-    });
-  };
-
-  return (
-    <div className="task-board">
-
-      <DragDropContext onDragEnd={onDragEnd}>
-        <div className="columns-container">
-          {["high", "medium", "low"].map((priority) => (
-            <Droppable droppableId={priority} key={priority}>
-              {(provided, snapshot) => (
-                <div
-                  className={`column ${priority}`}
-                  ref={provided.innerRef}
-                  {...provided.droppableProps}
-                >
-                  <h3>{priority.toUpperCase()} PRIORITY</h3>
-                  {tasks[priority].map((task, index) => (
-                    <Draggable
-                      key={task.id}
-                      draggableId={task.id}
-                      index={index}
-                    >
-                      {(provided, snapshot) => (
-                        <div
-                          className={`task-card ${
-                            snapshot.isDragging ? "dragging" : ""
-                          }`}
-                          ref={provided.innerRef}
-                          {...provided.draggableProps}
-                          {...provided.dragHandleProps}
-                        >
-                          {task.content}
-                        </div>
-                      )}
-                    </Draggable>
-                  ))}
-                  {provided.placeholder}
+    const renderTasks = (tasks) => {
+        return tasks.map((task) => (
+            <Draggable key={task.id}>
+                <div className={`task-card d-flex flex-column gap-3 ${styles.taskCard}`}>
+                    <Link to='/case-details/1'>{task.content}</Link>
+                    <span>{task.priority}</span>
+                    <p>{task.type}</p>
                 </div>
-              )}
-            </Droppable>
-          ))}
+            </Draggable>
+        ));
+    };
+
+    return (
+        <div className="task-board">
+            <h2>Task Management Board</h2>
+            <div className="d-flex gap-3">
+                <div className={`${styles.taskColumns}`}>
+                    <div className="column high">
+                        <div className={`column-header ${styles.columnHeader}`}>
+                            <h3>Newly Added</h3>
+                        </div>
+                        {renderTasks(newlyAdded)}
+                    </div>
+                </div>
+
+                <div className={`${styles.taskColumns}`}>
+                    <div className="column medium">
+                        <div className={`column-header ${styles.columnHeader}`}>
+                            <h3>Consult Scheduled</h3>
+                        </div>
+                        {renderTasks(consultScheduled)}
+                    </div>
+                </div>
+
+                <div className={`${styles.taskColumns}`}>
+                    <div className="column low">
+                        <div className={`column-header ${styles.columnHeader}`}>
+                            <h3>Pending Engagement</h3>
+                        </div>
+                        {renderTasks(pendingEngagement)}
+                    </div>
+                </div>
+
+                <div className={`${styles.taskColumns}`}>
+                    <div className="column lower">
+                        <div className={`column-header ${styles.columnHeader}`}>
+                            <h3>Working on Retainer</h3>
+                        </div>
+                        {renderTasks(workingOnRetainer)}
+                    </div>
+                </div>
+            </div>
         </div>
-      </DragDropContext>
-    </div>
-  );
+    );
 }
 
 export default TaskBoard;

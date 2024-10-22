@@ -1,0 +1,24 @@
+.overview {
+    justify-content: space-evenly;
+    background-color: #ffffffb8;
+    padding: 2em 1em;
+    margin: 3em auto;
+    border-radius: 8px;
+}
+
+.overview h2{
+    margin: 0 auto 1em;
+    font-family: "ADLaM Display";
+}
+
+.second h2 {
+ color: #D3212C;
+}
+
+.third h2 {
+ color: #069C56;  
+}
+
+.fourth h2 {
+ color: #888484;  
+}

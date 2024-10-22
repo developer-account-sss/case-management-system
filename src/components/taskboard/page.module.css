@@ -1,0 +1,15 @@
+.taskColumns {
+    width: 25%;
+}
+
+.columnHeader h3 {
+    font-size: 21px;
+    font-family: 'ADLaM Display';
+}
+
+.taskCard a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 800;
+}

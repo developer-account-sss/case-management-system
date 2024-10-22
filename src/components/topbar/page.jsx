@@ -1,7 +1,7 @@
 import React from "react";
 import logo from '../../assets/topbar/Albany County.png';
-import error from '../../assets/topbar/Error.png';
-import video from '../../assets/topbar/Video Stabilization.png';
+import notification from '../../assets/topbar/Doorbell.png';
+import inbox from '../../assets/topbar/Letter.png';
 import download from '../../assets/topbar/Download Icon.png';
 import styles from './page.module.css';
 import { IoSearch } from "react-icons/io5";
@@ -16,8 +16,8 @@ const Topbar = () => {
                 <img src={logo} alt="Albany County Logo" />
             </div>
             <div className={`d-flex justify-content-end gap-3 ${styles.secondSection}`}>
-                <img src={error} alt="Error logo" />
-                <img src={video} alt="Video logo" />
+                <img src={notification} alt="Error logo" />
+                <img src={inbox} alt="Video logo" />
                 <button>Sign out</button>
             </div>
             </div>
