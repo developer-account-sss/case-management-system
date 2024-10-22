@@ -6,10 +6,12 @@ import download from '../../assets/topbar/Download Icon.png';
 import styles from './page.module.css';
 import { IoSearch } from "react-icons/io5";
 import { IoIosAddCircle } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const Topbar = () => {
     return (
         <>
+            <div>
             <div className={`${styles.logoSection}`}>
                 <img src={logo} alt="Albany County Logo" />
             </div>
@@ -17,6 +19,7 @@ const Topbar = () => {
                 <img src={error} alt="Error logo" />
                 <img src={video} alt="Video logo" />
                 <button>Sign out</button>
+            </div>
             </div>
             <div className={`${styles.thirdSection}`}>
                 <div className="d-flex justify-content-between gap-5">
@@ -27,7 +30,7 @@ const Topbar = () => {
                     <div className="d-flex gap-5">
                         <div className={`${styles.createBtn}`}>
                             <IoIosAddCircle />
-                            <span>Create</span>
+                            <span><Link to= "/create-case">Create</Link></span>
                         </div>
                         <div className={`${styles.image}`}>
                             <img src={download} alt="download icon" />

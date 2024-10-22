@@ -40,14 +40,14 @@
     font-size: 26px;
     width: 75%;
     margin: 0.75em auto;
-    background-color: #FFD9B6;
+    background-color: var(--lightYellow);
     color: #000000;
     border: none;
     border-radius: 10px;
 }
 
 .loginText button:hover {
-    background-color: #fdb26e;
+    background-color: var(--darkYellow);
 }
 
 .loginImage {

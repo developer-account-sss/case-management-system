@@ -5,9 +5,7 @@ import { Link } from "react-router-dom";
 
 const LoginPage = () => {
     return (
-        <>
-            <div className="container-fluid">
-                <div className="row">
+                <div className="login-page d-flex m-0">
                     <div className= {`col-sm-6 ${styles.row}`}>
                         <div className={`d-flex justify-content-center flex-column ${styles.loginImage}`}>
                             <h3>Welcome to Albany County</h3>
@@ -32,8 +30,7 @@ const LoginPage = () => {
                     </div>
                 </div>
 
-            </div>
-        </>
+
     )
 };
 

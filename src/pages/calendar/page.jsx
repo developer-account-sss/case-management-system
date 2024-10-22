@@ -1,9 +1,11 @@
 import React from "react";
+import MyCalendar from "../../components/calendar/page";
 
 const Calendar= ()=> {
     return(
         <>
-        <h1>Welcome to Calendar</h1>
+        <h1>Your Calendar</h1>
+        <MyCalendar />
         </>
     );
 };

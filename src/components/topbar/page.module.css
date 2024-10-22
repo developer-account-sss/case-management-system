@@ -22,7 +22,7 @@
 
 .secondSection button, .createBtn {
     font-family: "ADLaM Display", sans-serif;
-    background-color: #FFD9B6;
+    background-color: var(--lightYellow);
     color: #000000;
     border: none;
     border-radius: 10px;
@@ -31,7 +31,7 @@
 }
 
 .secondSection button:hover , .createBtn:hover{
-    background-color: #fdb26e;
+    background-color: var(--darkYellow);
     color: #ffffff;
 }
 
@@ -47,6 +47,11 @@
 
 .createBtn span {
     margin-left: 0.5em;
+}
+
+.createBtn a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .image {

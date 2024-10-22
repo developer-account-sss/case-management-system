@@ -43,7 +43,7 @@ const Sidebar = () => {
 
     const rotateIcon = (count) => {
         const sidebar = document.getElementById('sidebar-open');
-        console.log(count);
+        // console.log(count);
 
         if(count%2 !== 1) {
             sidebar.style.transform= "rotate(360deg)";
@@ -57,8 +57,8 @@ const Sidebar = () => {
         return (
             <>
             <div className="sideBarItems">
-                <ul className={`list-group ${styles.listItems} ${styles.sidebar}`}>
-                    <li className={`list-group-item ${styles.listItemHeader} ${styles.sidebar}`}>
+                <ul className={`list-group d-flex flex-column justify-content-around ${styles.listItems} ${styles.sidebar}`}>
+                    <li className={`list-group-item ${styles.listItemHeader} ${styles.purpleBg}`}>
                         <div className="d-flex justify-content-between">
                             <img src={logo} alt="menu item icon" />
                             <img id= 'sidebar-open' src={sidebar} alt="menu item icon" onClick= {()=> {
@@ -67,11 +67,12 @@ const Sidebar = () => {
                             }}/>
                         </div>
                     </li>
-
+<div className="navItems">
                     {menuItems.map((item, index) => (
+                        
                         <li
                             key={index}
-                            className={`list-group-item ${styles.listGroupItem} ${styles.sidebar} ${activeMenuItem === index ? styles.activeMenuItem : ''}`}
+                            className={`list-group-item ${styles.listGroupItem} ${styles.purpleBg} ${activeMenuItem === index ? styles.activeMenuItem : ''}`}
                             onClick={() => handleMenuItemClick(index, item)}
                         >
                             <div className="d-flex gap-3">
@@ -82,8 +83,9 @@ const Sidebar = () => {
                             </div>
                         </li>
                     ))}
+                    </div>
 
-                    <li className={`list-group-item ${styles.listItemHeader} ${styles.sidebar}`}>
+                    <li className={`list-group-item ${styles.listItemHeader} ${styles.purpleBg}`}>
                         <div className="d-flex justify-content-between">
                             <img src={user} alt="menu item icon" />
                             <div className="d-flex flex-column">

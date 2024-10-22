@@ -6,7 +6,12 @@
 }
 
 .sidebar {
-    background-color: #FFD9B6;
+    background: linear-gradient(90deg, #8697C4 0%, #ADBBDA 100%);
+    height: 100%;
+}
+
+.purpleBg {
+    background: linear-gradient(90deg, #8697C4 0%, #ADBBDA 100%);
 }
 
 .listItemHeader {
@@ -17,7 +22,7 @@
 .listGroupItem{
     font-size: 18px;
     font-weight: 800;
-    margin: 0.5em;
+    margin: 1em;
     border: none;
     border-bottom: 1px solid #ffffff;
     border-radius: 6px;
@@ -26,7 +31,7 @@
 }
 
 .listGroupItem:hover {
-    background-color: #fdb26e;
+    background-color: var(--darkYellow);
     color: #ffffff;
 }
 

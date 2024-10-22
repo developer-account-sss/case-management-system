@@ -1,3 +1,9 @@
+:root {
+  --lightYellow: #FFD9B6;
+  --darkYellow: #fdb26e;
+
+}
+
 body {
   margin: 0;
   font-family: "Abhaya Libre", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -20,7 +26,14 @@ code {
 }
 
 .col-sm-3 {
-  width: 20% ;
+  width: 20%;
+}
+
+.col-sm-3,
+.col-sm-2 {
+  height: 100vh;
+  position: sticky;
+  top: 0;
 }
 
 .col-sm-9 {
@@ -29,6 +42,10 @@ code {
 
 h1 {
   margin: 1em auto;
+}
+
+.sideBarItems {
+  height: 100%;
 }
 
 #sidebar-open {

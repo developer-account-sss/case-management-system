@@ -1,0 +1,18 @@
+.event-indicator {
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    padding: 2px;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 5px;
+  }
+
+button{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+span {
+    
+}

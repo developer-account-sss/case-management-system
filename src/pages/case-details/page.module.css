@@ -1,0 +1,55 @@
+.topSection {
+    margin: 3.5em 0 1em;
+    padding: 0 0.5em;
+}
+
+.topSection button {
+    padding: 0.5em 2.5em;
+    height: fit-content;
+    border: 2px solid #000000;
+    border-radius: 6px;
+    background-color: transparent;
+}
+
+.topSection button:hover {
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.topSection button a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.editIcon {
+    height: 2.5em;
+}
+
+.editIcon img {
+    height: 100%;
+}
+
+.secondSection {
+    margin: 3.5em 0 1em;
+    padding: 0 0.5em;
+}
+
+.secondSection span {
+    border-bottom: 2px solid #00000069;
+    padding: 0 1.25em 0 0;
+    width: fit-content;
+}
+
+.secondSection p {
+    font-size: 24px;
+    margin-top: 0.75em;
+    border: 1px solid #00000069;
+    border-radius: 50px;
+    padding: 0.5em 1em;
+}
+
+.thirdSection h3 {
+    margin: 1.5em auto 0.5em;
+}

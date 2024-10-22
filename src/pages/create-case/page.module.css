@@ -1,0 +1,31 @@
+.inputLabel {
+    font-size: 24px;
+    font-weight: 800;
+    width: 25%;
+}
+
+.inputBox {
+    width: 75% !important;
+}
+
+.addCaseBtn {
+    font-family: "ADLaM Display", sans-serif;
+    width: fit-content;
+    cursor: pointer;
+    margin: 0.5em 0;
+    padding: 1em 2em;
+    font-size: 21px;
+    font-weight: normal;
+    border-radius: 6px;
+    background-color: var(--lightYellow);
+    color: #000000;
+}
+
+.addCaseBtn:hover {
+    background-color: var(--darkYellow);
+    color: #ffffff;
+}
+
+.addCaseBtn span {
+    margin-left: 0.5em;
+}
