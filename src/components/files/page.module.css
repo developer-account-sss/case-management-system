@@ -1,0 +1,17 @@
+.files {
+    width: 20%;
+    margin-bottom: 2.5em;
+}
+
+.files img {
+    width: 5em;
+    height: auto;
+}
+
+.files span {
+    font-family: "ADLaM Display";
+}
+
+.files:hover {
+    background-color: #ffd9b687;
+}

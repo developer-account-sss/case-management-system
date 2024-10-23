@@ -14,13 +14,27 @@ import { CollapseMenu } from "../../Context";
 import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
-    const {collapseMenu, setCollapseMenu}= useContext(CollapseMenu);
-    
+    const { collapseMenu, setCollapseMenu } = useContext(CollapseMenu);
+
     const [activeMenuItem, setActiveMenuItem] = useState(0);
 
-    var count= 0;
+    const [subMenuOpen, setSubMenuOpen]= useState(false);
 
-    const navigate= useNavigate();
+    const subMenuItems= [
+        "Accusers",
+        "Accused",
+        "Legal Team",
+        "Witnesses",
+    ]
+
+    const toggleSubMenuOpen= ()=> {
+        console.log(subMenuOpen);
+        setSubMenuOpen(!subMenuOpen);
+    };
+
+    var count = 0;
+
+    const navigate = useNavigate();
 
     const menuItems = [
         { icon: dashboard, label: 'dashboard' },
@@ -36,7 +50,7 @@ const Sidebar = () => {
         navigate(`/${item.label}/1`);
     };
 
-    const setCount= ()=> {
+    const setCount = () => {
         count++;
         rotateIcon(count);
     }
@@ -45,44 +59,44 @@ const Sidebar = () => {
         const sidebar = document.getElementById('sidebar-open');
         // console.log(count);
 
-        if(count%2 !== 1) {
-            sidebar.style.transform= "rotate(360deg)";
+        if (count % 2 !== 1) {
+            sidebar.style.transform = "rotate(360deg)";
         }
         else {
-            sidebar.style.transform= "rotate(180deg)";
+            sidebar.style.transform = "rotate(180deg)";
         }
 
     }
 
-        return (
-            <>
+    return (
+        <>
             <div className="sideBarItems">
                 <ul className={`list-group d-flex flex-column justify-content-around ${styles.listItems} ${styles.sidebar}`}>
                     <li className={`list-group-item ${styles.listItemHeader} ${styles.purpleBg}`}>
                         <div className="d-flex justify-content-between">
                             <img src={logo} alt="menu item icon" />
-                            <img id= 'sidebar-open' src={sidebar} alt="menu item icon" onClick= {()=> {
+                            <img id='sidebar-open' src={sidebar} alt="menu item icon" onClick={() => {
                                 setCollapseMenu(!collapseMenu);
                                 setCount();
-                            }}/>
+                            }} />
                         </div>
                     </li>
-<div className="navItems">
-                    {menuItems.map((item, index) => (
-                        
-                        <li
-                            key={index}
-                            className={`list-group-item ${styles.listGroupItem} ${styles.purpleBg} ${activeMenuItem === index ? styles.activeMenuItem : ''}`}
-                            onClick={() => handleMenuItemClick(index, item)}
-                        >
-                            <div className="d-flex gap-3">
-                                <img src={item.icon} alt="menu item icon" />
-                                <span>{item.label}</span>
+                    <div className="navItems">
+                        {menuItems.map((item, index) => (
 
-                                {activeMenuItem === index && <span className={styles.redDot}></span>}
-                            </div>
-                        </li>
-                    ))}
+                            <li
+                                key={index}
+                                className={`list-group-item ${styles.listGroupItem} ${styles.purpleBg} ${activeMenuItem === index ? styles.activeMenuItem : ''}`}
+                                onClick={() => handleMenuItemClick(index, item)}
+                            >
+                                <div className="d-flex gap-3">
+                                    <img src={item.icon} alt="menu item icon" />
+                                    <span onClick={item.label === "clients" ? toggleSubMenuOpen : undefined}>{item.label}</span>
+
+                                    {activeMenuItem === index && <span className={styles.redDot}></span>}
+                                </div>
+                            </li>
+                        ))}
                     </div>
 
                     <li className={`list-group-item ${styles.listItemHeader} ${styles.purpleBg}`}>
@@ -97,6 +111,21 @@ const Sidebar = () => {
                     </li>
                 </ul>
             </div>
+
+            {/* Submenu */}
+            {/* {
+                subMenuOpen && (
+                    <div className={styles.submenu}>
+                        <ul className={`list-group d-flex flex-column justify-content-around ${styles.listItems}`}>
+                            {subMenuItems.map((item, index) => (
+                                <li key={index} className={`list-group-item ${styles.listGroupItem}`}>
+                                    <span onClick={toggleSubMenuOpen}>{item}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                )
+            } */}
         </>
     );
 };

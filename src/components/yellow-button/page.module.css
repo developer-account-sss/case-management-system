@@ -1,0 +1,21 @@
+.button {
+    font-family: "ADLaM Display", sans-serif;
+    background-color: var(--lightYellow);
+    color: #000000;
+    border: none;
+    border-radius: 10px;
+    padding: 0 1em;
+    cursor: pointer;
+    margin: 1em auto;
+    padding: 0.75em 1.5em;
+    height: fit-content;
+}
+
+.button:hover {
+    background-color: var(--darkYellow);
+    color: #ffffff;
+}
+
+.button span {
+    margin-left: 0.5em;
+}

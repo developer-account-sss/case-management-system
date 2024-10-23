@@ -1,0 +1,21 @@
+.clientList {
+    border: 1px solid #000000;
+    border-radius: 8px;
+
+}
+
+.client {
+    border-bottom: 1px solid #000000;
+    padding: 0.75em;
+    border-radius: 8px;
+}
+
+.client a {
+    text-decoration: none;
+    color: inherit;
+    
+}
+
+.client:hover {
+    background-color: #f2f2f2;
+}

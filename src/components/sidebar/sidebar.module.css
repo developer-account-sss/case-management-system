@@ -61,3 +61,17 @@
     border-radius: 50%;
     transform: translateY(-50%);
 }
+
+/* Submenu */
+.submenu {
+    background: linear-gradient(90deg, #8697C4 0%, #ADBBDA 100%);
+    left: 20em;
+    position: absolute;
+    top: 40%;
+    width: max-content;
+    border-radius: 8px;
+}
+
+.submenu li {
+    background: linear-gradient(90deg, #8697C4 0%, #ADBBDA 100%);
+}
