@@ -24,6 +24,7 @@ function App() {
   const loginRoute= typeof window !== 'undefined' && window.location.pathname === '/' ? true : false;
 
   // console.log(loginRoute);
+  
 
   return (
     <Router>

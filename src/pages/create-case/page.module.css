@@ -5,14 +5,14 @@
 }
 
 .inputBox {
-    width: 75% !important;
+    width: 65% !important;
 }
 
 .addCaseBtn {
     font-family: "ADLaM Display", sans-serif;
     width: fit-content;
     cursor: pointer;
-    margin: 0.5em 0;
+    margin: 2.5em auto;
     padding: 1em 2em;
     font-size: 21px;
     font-weight: normal;

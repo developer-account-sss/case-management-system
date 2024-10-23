@@ -25,7 +25,7 @@ const LoginPage = () => {
                             <input type="text" id="fname" name="firstname" placeholder="Email address" />
                             <input type="text" id="lname" name="lastname" placeholder="Password" />
                             <Link to= '/'>Forgot Password ?</Link>
-                            <button type="submit" className="btn btn-primary">Sign in</button>
+                            <button type="submit" className="btn btn-primary"><a href= '/dashboard/1'>Sign in</a></button>
                         </form>
                     </div>
                 </div>

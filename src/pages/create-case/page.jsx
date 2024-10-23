@@ -19,9 +19,9 @@ const CreateCase = () => {
                         required
                     />
                 </div>
-                <div class="mb-3 d-flex">
+                <div className="mb-3 d-flex">
                     <label className={`d-flex flex-wrap align-content-center ${styles.inputLabel}`} for="exampleFormControlSelect1">Select Case Type</label>
-                    <select class={`form-control ${styles.inputBox}`} id="exampleFormControlSelect1">
+                    <select className={`form-control ${styles.inputBox}`} id="exampleFormControlSelect1">
                         <option>Bankruptcy</option>
                         <option>Business</option>
                         <option>Civil</option>
@@ -35,25 +35,25 @@ const CreateCase = () => {
                         <option>Foreclosure</option>
                     </select>
                 </div>
-                <div class="form-group mb-3 d-flex">
+                <div className="form-group mb-3 d-flex">
                     <label className={`d-flex flex-wrap align-content-center ${styles.inputLabel}`} for="exampleFormControlSelect1">Select Case Priority</label>
-                    <select class={`form-control ${styles.inputBox}`} id="exampleFormControlSelect1">
+                    <select className={`form-control ${styles.inputBox}`} id="exampleFormControlSelect1">
                         <option>High</option>
                         <option>Medium</option>
                         <option>Low</option>
 
                     </select>
                 </div>
-                <div className={`mb-3 d-flex ${styles.inputField}`}>
-                    <span className= {`${styles.inputLabel}`}>Date Opened (&apos;dd/mm/yyyy&apos;)</span>
+                <div className={`form-group mb-3 d-flex`}>
+                    <span className={`${styles.inputLabel}`}>Date Opened (&apos;dd/mm/yyyy&apos;)</span>
                     <input
                         type="date"
                         className={`form-control ${styles.inputBox}`}
                         placeholder="Course Date"
                     />
                 </div>
-                <div className={`mb-3 d-flex ${styles.inputField}`}>
-                    <span className= {`${styles.inputLabel}`}>Date Closed <i>(&apos;dd/mm/yyyy&apos;)</i></span>
+                <div className={`form-group mb-3 d-flex`}>
+                    <span className={`${styles.inputLabel}`}>Date Closed <i>(&apos;dd/mm/yyyy&apos;)</i></span>
                     <input
                         type="date"
                         className={`form-control ${styles.inputBox}`}
@@ -116,12 +116,7 @@ const CreateCase = () => {
                     <span className={`d-flex flex-wrap align-content-center ${styles.inputLabel}`}>
                         Documents & Evidence
                     </span>
-                    <input
-                        type="text"
-                        className={`form-control ${styles.inputBox}`}
-                        placeholder="Enter details here"
-                        required
-                    />
+                    <input className={`form-control ${styles.inputBox}`} type="file" id="formFileMultiple" multiple />
                 </div>
                 <div className={`mb-3 d-flex`}>
                     <span className={`d-flex flex-wrap align-content-center ${styles.inputLabel}`}>
@@ -147,9 +142,9 @@ const CreateCase = () => {
                 </div>
             </form>
             <div className={`${styles.addCaseBtn}`}>
-                            <IoIosAddCircle />
-                            <span>Add Case</span>
-                        </div>
+                <IoIosAddCircle />
+                <span>Add Case</span>
+            </div>
             {/* </div> */}
 
 

@@ -1,0 +1,64 @@
+.timeline {
+    display: flex;
+    justify-content: space-between; /* Even space between elements */
+    background-color: #ffffff26;
+    padding: 2em 1em;
+    margin: 3em auto;
+    border-radius: 8px;
+    align-items: center;
+    width: 100%; /* Ensure it takes the full width of the container */
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 10%; /* Set each block to take up an equal percentage of space */
+}
+
+.circles h2 {
+    background-color: #239498a6;
+    color: #fff;
+    padding: 0.5em;
+    border-radius: 50%;
+    font-weight: bold;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5em;
+}
+
+.circles span {
+    font-family: "ADLaM Display";
+    text-align: center;
+    font-size: 0.9em;
+    color: #00000078;
+}
+
+.active h2{
+    background-color: #239498;
+    color: #fff;
+}
+
+.active span {
+    color: #000;
+}
+
+.line {
+    flex-grow: 1; /* Make the lines flexible and take the available space between the circles */
+    display: flex;
+    justify-content: center;
+}
+
+.line hr {
+    margin: 0;
+    width: 100%;
+    border-top: 3px solid var(--lightYellow);
+    opacity: 1;
+}
+
+.activeLine hr {
+    border-top: 3px solid var(--darkYellow);
+}

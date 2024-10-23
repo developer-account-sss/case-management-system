@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 import edit from '../../assets/case-details/Edit Icon.png';
 import styles from './page.module.css';
 import styles2 from '../cases/page.module.css';
+import Timeline from "../../components/timeline/page";
 
 const CaseDetails = () => {
     return (
         <>
+            <Timeline />
             <div className={`d-flex justify-content-between ${styles.topSection}`}>
                 <button>
                     <Link to='/dashboard/1'>Go to Dashboard</Link>
