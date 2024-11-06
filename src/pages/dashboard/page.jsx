@@ -9,7 +9,7 @@ const Dashboard= ()=> {
     return(
         <>
         <FinancialOverview />
-        <div className="d-flex" style={{margin: '3em auto'}}>
+        <div className="d-flex justify-content-around" style={{margin: '3em auto'}}>
             <DonutChart />
             <StatBox />   
         </div>

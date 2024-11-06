@@ -42,7 +42,7 @@ function TaskBoard() {
 
     return (
         <div className="task-board">
-            <h2>Task Management Board</h2>
+            
             <div className="d-flex gap-3">
                 <div className={`${styles.taskColumns}`}>
                     <div className="column high">

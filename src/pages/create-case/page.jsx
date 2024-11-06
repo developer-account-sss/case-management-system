@@ -45,7 +45,8 @@ const CreateCase = () => {
                     </select>
                 </div>
                 <div className={`form-group mb-3 d-flex`}>
-                    <span className={`${styles.inputLabel}`}>Date Opened (&apos;dd/mm/yyyy&apos;)</span>
+                    {/* <span className={`d-flex flex-wrap align-content-center ${styles.inputLabel}`}>Date Opened (&apos;dd/mm/yyyy&apos;)</span> */}
+                    <span className={`d-flex flex-wrap align-content-center ${styles.inputLabel}`}>Date Opened</span>
                     <input
                         type="date"
                         className={`form-control ${styles.inputBox}`}
@@ -53,7 +54,8 @@ const CreateCase = () => {
                     />
                 </div>
                 <div className={`form-group mb-3 d-flex`}>
-                    <span className={`${styles.inputLabel}`}>Date Closed <i>(&apos;dd/mm/yyyy&apos;)</i></span>
+                    {/* <span className={`d-flex flex-wrap align-content-center ${styles.inputLabel}`}>Date Closed <i>(&apos;dd/mm/yyyy&apos;)</i></span> */}
+                    <span className={`d-flex flex-wrap align-content-center ${styles.inputLabel}`}>Date Closed</span>
                     <input
                         type="date"
                         className={`form-control ${styles.inputBox}`}

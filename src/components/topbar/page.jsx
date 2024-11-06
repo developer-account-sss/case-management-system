@@ -57,7 +57,7 @@ const Topbar = () => {
                         onClick={toggleInbox}
                         style={{ cursor: "pointer" }} 
                     />
-                    <button>Sign out</button>
+                    <button><a href= '/'>Sign out</a></button>
                 </div>
             </div>
 

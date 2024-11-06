@@ -99,7 +99,7 @@ const DonutChart = (props) => {
   };
   const series = change;
   return (
-    <div style={{margin: '0 auto', backgroundColor: '#f0f0f06e', padding: '1em', borderRadius: '8px'}}>
+    <div style={{backgroundColor: '#f0f0f06e', padding: '1em', borderRadius: '8px'}}>
       <Chart
         options={options}
         series={series}
